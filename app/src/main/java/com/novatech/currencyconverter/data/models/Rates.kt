@@ -1,3 +1,5 @@
+package com.novatech.currencyconverter.data.models
+
 data class Rates(
     val AED: Double,
     val AFN: Double,
