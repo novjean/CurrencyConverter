@@ -10,7 +10,7 @@ class DefaultMainRepository @Inject constructor(
 ) : MainRepository {
     override suspend fun getRates(base: String): Resource<CurrencyResponse> {
         return try{
-            val response = api.getRates(base)
+            val response = api.getRates("<enter-access-key>", base)
             val result = response.body()
             if(response.isSuccessful && result!=null){
                 Resource.Success(result)
